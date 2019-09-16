@@ -52,6 +52,15 @@
                 <action android:name="com.anbang.myapplication.service.TEST_SERVICE3"/>
             </intent-filter>
         </service>
+        <service android:name=".aidl.AIDLService"
+            android:process=":service"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.AIDLService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <activity android:name=".AIDLClientActivity"></activity>
     </application>
 
 </manifest>

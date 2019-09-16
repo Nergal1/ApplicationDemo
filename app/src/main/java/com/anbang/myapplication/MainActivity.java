@@ -87,6 +87,16 @@ public class MainActivity extends AppCompatActivity {
                 PollingUtils.startPollingService(MainActivity.this, 60, PollingService.class, PollingService.ACTION);
             }
         });
+
+        Button aidlTest = findViewById(R.id.aidl_service);
+        aidlTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,AIDLClientActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Intent it1 = new Intent("com.anbang.myapplication.service.TEST_SERVICE3");
         it1.setPackage(getPackageName());
         Bundle b1 = new Bundle();
