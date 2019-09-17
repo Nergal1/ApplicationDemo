@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".broadcast.BroadcastTestActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,58 +19,64 @@
         </activity>
         <activity android:name=".SecondActivity">
             <intent-filter>
-            <action android:name="second_action"></action>
-            <category android:name="second_category"></category>
-            <category android:name="android.intent.category.DEFAULT"></category>
-                <data
-                    android:mimeType="jpeg/png"
-                    android:scheme="dj"
-                    android:host="www.dajia.com"
-                    android:port="1000"
-                    android:path="/image"
-                    ></data>
-            </intent-filter>
-        </activity>
+                <action android:name="second_action" />
 
-        <!-- 配置Service组件,同时配置一个action -->
+                <category android:name="second_category" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="www.dajia.com"
+                    android:mimeType="jpeg/png"
+                    android:path="/image"
+                    android:port="1000"
+                    android:scheme="dj" />
+            </intent-filter>
+        </activity> <!-- 配置Service组件,同时配置一个action -->
+        <activity android:name=".AIDLClientActivity" />
+        <activity android:name=".AIDLClientComplexActivity" />
         <service android:name=".service.TestService1">
             <intent-filter>
-                <action android:name="com.anbang.myapplication.service.TEST_SERVICE1"/>
+                <action android:name="com.anbang.myapplication.service.TEST_SERVICE1" />
             </intent-filter>
         </service>
-        <service android:name=".service.TestService2" android:exported="false">
+        <service
+            android:name=".service.TestService2"
+            android:exported="false">
             <intent-filter>
-                <action android:name="com.anbang.myapplication.service.TEST_SERVICE2"/>
+                <action android:name="com.anbang.myapplication.service.TEST_SERVICE2" />
             </intent-filter>
         </service>
         <service android:name=".polling.PollingService">
             <intent-filter>
-                <action android:name="com.anbang.myapplication.polling.PollingService"></action>
+                <action android:name="com.anbang.myapplication.polling.PollingService" />
             </intent-filter>
         </service>
-        <service android:name=".service.TestService3" android:exported="false">
-            <intent-filter >
-                <action android:name="com.anbang.myapplication.service.TEST_SERVICE3"/>
+        <service
+            android:name=".service.TestService3"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.anbang.myapplication.service.TEST_SERVICE3" />
             </intent-filter>
         </service>
-        <service android:name=".aidl.AIDLService"
-            android:process=":service"
-            >
+
+        <service
+            android:name=".aidl.AIDLService"
+            android:process=":service">
             <intent-filter>
                 <action android:name="android.intent.action.AIDLService" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </service>
-        <service android:name=".aidl.AidlService2"
-            android:process=":service2"
-            >
+        <service
+            android:name=".aidl.AidlService2"
+            android:process=":service2">
             <intent-filter>
                 <action android:name="android.intent.action.AIDLService2" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </service>
-        <activity android:name=".AIDLClientActivity"></activity>
-        <activity android:name=".AIDLClientComplexActivity"></activity>
     </application>
 
 </manifest>

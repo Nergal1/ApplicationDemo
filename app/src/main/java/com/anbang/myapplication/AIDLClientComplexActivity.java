@@ -15,7 +15,7 @@ import android.widget.EditText;
 import android.widget.TextView;  
   
   
-public class AIDLClientComplexActivity extends Activity {  
+public class AIDLClientComplexActivity extends BaseActivity {
   
     private ISalary salaryService;  
     private Button btnquery;  

@@ -16,7 +16,7 @@ import android.widget.Toast;
 import com.anbang.myapplication.service.TestService2;
 
 
-public class SecondActivity extends AppCompatActivity {
+public class SecondActivity extends BaseActivity {
     //保持所启动的Service的IBinder对象,同时定义一个ServiceConnection对象
     TestService2.MyBinder binder;
     private ServiceConnection conn = new ServiceConnection() {

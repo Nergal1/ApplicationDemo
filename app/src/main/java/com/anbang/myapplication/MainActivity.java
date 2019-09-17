@@ -9,13 +9,13 @@ import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
+import com.anbang.myapplication.broadcast.BroadcastTestActivity;
 import com.anbang.myapplication.polling.PollingService;
 import com.anbang.myapplication.polling.PollingUtils;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     private String tag = "MainActivity";
 
     @Override
@@ -107,6 +107,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,AIDLClientActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button broadcast = findViewById(R.id.broadcast);
+        broadcast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, BroadcastTestActivity.class);
                 startActivity(intent);
             }
         });

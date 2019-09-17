@@ -46,4 +46,11 @@
         android:text="aidl complex test"
         android:layout_margin="15dp"
         ></Button>
+    <Button
+        android:id="@+id/broadcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="broadcast test"
+        android:layout_margin="15dp"
+        ></Button>
 </LinearLayout>

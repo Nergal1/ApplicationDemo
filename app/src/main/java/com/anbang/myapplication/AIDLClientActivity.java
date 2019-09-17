@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 
-public class AIDLClientActivity extends AppCompatActivity implements View.OnClickListener{
+public class AIDLClientActivity extends BaseActivity implements View.OnClickListener{
 
     private EditText edit_num;
     private Button btn_query;
