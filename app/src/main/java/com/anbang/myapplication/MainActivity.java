@@ -88,6 +88,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button aidlComplexTest = findViewById(R.id.aidl_service_c);
+        aidlComplexTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,AIDLClientComplexActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Button aidlTest = findViewById(R.id.aidl_service);
         aidlTest.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -60,7 +60,16 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </service>
+        <service android:name=".aidl.AidlService2"
+            android:process=":service2"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.AIDLService2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
         <activity android:name=".AIDLClientActivity"></activity>
+        <activity android:name=".AIDLClientComplexActivity"></activity>
     </application>
 
 </manifest>
