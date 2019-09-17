@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.i(tag, "---------onCreate---------");
         Button button = findViewById(R.id.start_btn);
+        //显式启动和隐式启动
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
         Button startService = findViewById(R.id.start_service);
         Button stopService = findViewById(R.id.stop_service);
         Button pollingService = findViewById(R.id.polling_service);
+
+        //start service
         startService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //stop servic
         stopService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //轮询服务
         pollingService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

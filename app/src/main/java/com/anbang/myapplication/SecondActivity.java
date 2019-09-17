@@ -43,6 +43,7 @@ public class SecondActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),""+uri.toString(),Toast.LENGTH_SHORT).show();
 
         Button bindService = findViewById(R.id.bindservice);
+        //bind service
         bindService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,6 +54,7 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
         Button unbindService = findViewById(R.id.unbindservice);
+        //unbind service
         unbindService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,6 +71,8 @@ public class SecondActivity extends AppCompatActivity {
         });
 
         Button connService = findViewById(R.id.connservice);
+
+        //获取service 运行结果
         connService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

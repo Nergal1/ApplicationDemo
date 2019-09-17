@@ -16,11 +16,6 @@ public class Salary implements Parcelable{
 		this.salary = salary;
 	}
 
-
-	
-
-
-
 	public String getType() {
 		return type;
 	}
