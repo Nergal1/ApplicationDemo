@@ -4,8 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.anbang.myapplication.ISalary;
-import com.anbang.myapplication.Person;
-import com.anbang.myapplication.Salary;
+
 import android.app.Service;
 import android.content.Intent;  
 import android.os.IBinder;  

@@ -1,7 +1,6 @@
 package com.anbang.myapplication.aidl;
 
-import android.app.Activity;
-import android.app.Service;  
+import android.app.Service;
 import android.content.ComponentName;  
 import android.content.Intent;  
 import android.content.ServiceConnection;  
@@ -16,9 +15,7 @@ import android.widget.TextView;
 
 import com.anbang.myapplication.BaseActivity;
 import com.anbang.myapplication.ISalary;
-import com.anbang.myapplication.Person;
 import com.anbang.myapplication.R;
-import com.anbang.myapplication.Salary;
 
 
 public class AIDLClientComplexActivity extends BaseActivity {

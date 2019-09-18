@@ -1,4 +1,4 @@
-package com.anbang.myapplication;
+package com.anbang.myapplication.aidl;
 
 import android.os.Parcel;
 import android.os.Parcelable;

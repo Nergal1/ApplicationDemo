@@ -1,7 +1,7 @@
 package com.anbang.myapplication;
 
-import com.anbang.myapplication.Salary;
-import com.anbang.myapplication.Person;
+import com.anbang.myapplication.aidl.Salary;
+import com.anbang.myapplication.aidl.Person;
 interface ISalary
 {
 
