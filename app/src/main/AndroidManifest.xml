@@ -32,8 +32,8 @@
                     android:scheme="dj" />
             </intent-filter>
         </activity> <!-- 配置Service组件,同时配置一个action -->
-        <activity android:name=".AIDLClientActivity" />
-        <activity android:name=".AIDLClientComplexActivity" />
+        <activity android:name=".aidl.AIDLClientActivity" />
+        <activity android:name=".aidl.AIDLClientComplexActivity" />
         <service android:name=".service.TestService1">
             <intent-filter>
                 <action android:name="com.anbang.myapplication.service.TEST_SERVICE1" />

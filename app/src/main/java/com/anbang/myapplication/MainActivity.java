@@ -10,6 +10,8 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.anbang.myapplication.aidl.AIDLClientActivity;
+import com.anbang.myapplication.aidl.AIDLClientComplexActivity;
 import com.anbang.myapplication.broadcast.BroadcastTestActivity;
 import com.anbang.myapplication.polling.PollingService;
 import com.anbang.myapplication.polling.PollingUtils;
@@ -97,7 +99,7 @@ public class MainActivity extends BaseActivity {
         aidlComplexTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,AIDLClientComplexActivity.class);
+                Intent intent = new Intent(MainActivity.this, AIDLClientComplexActivity.class);
                 startActivity(intent);
             }
         });
@@ -106,7 +108,7 @@ public class MainActivity extends BaseActivity {
         aidlTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,AIDLClientActivity.class);
+                Intent intent = new Intent(MainActivity.this, AIDLClientActivity.class);
                 startActivity(intent);
             }
         });

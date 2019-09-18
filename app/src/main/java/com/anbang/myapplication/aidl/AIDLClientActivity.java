@@ -1,4 +1,4 @@
-package com.anbang.myapplication;
+package com.anbang.myapplication.aidl;
 
 import android.content.ComponentName;
 import android.content.Intent;
@@ -14,6 +14,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.anbang.myapplication.BaseActivity;
+import com.anbang.myapplication.IPerson;
+import com.anbang.myapplication.R;
 
 
 public class AIDLClientActivity extends BaseActivity implements View.OnClickListener{

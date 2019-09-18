@@ -1,4 +1,4 @@
-package com.anbang.myapplication;
+package com.anbang.myapplication.aidl;
 
 import android.app.Activity;
 import android.app.Service;  
@@ -12,12 +12,18 @@ import android.view.View;
 import android.view.View.OnClickListener;  
 import android.widget.Button;  
 import android.widget.EditText;  
-import android.widget.TextView;  
-  
-  
+import android.widget.TextView;
+
+import com.anbang.myapplication.BaseActivity;
+import com.anbang.myapplication.ISalary;
+import com.anbang.myapplication.Person;
+import com.anbang.myapplication.R;
+import com.anbang.myapplication.Salary;
+
+
 public class AIDLClientComplexActivity extends BaseActivity {
   
-    private ISalary salaryService;  
+    private ISalary salaryService;
     private Button btnquery;  
     private EditText editname;  
     private TextView textshow;  
@@ -56,7 +62,7 @@ public class AIDLClientComplexActivity extends BaseActivity {
                 try  
                 {  
                     String name = editname.getText().toString();  
-                    Salary salary = salaryService.getMsg(new Person(1,name));  
+                    Salary salary = salaryService.getMsg(new Person(1,name));
                     textshow.setText(name + salary.toString());  
                 }catch(RemoteException e){e.printStackTrace();}  
             }  
