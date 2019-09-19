@@ -77,6 +77,11 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </service>
+        <provider
+            android:authorities="com.anbang.myapplication.contentprovider.nameprovider"
+            android:name=".contentprovider.NameContentProvider"
+            android:exported="true"
+            ></provider>
     </application>
 
 </manifest>

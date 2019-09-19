@@ -1,11 +1,15 @@
 package com.anbang.myapplication;
 
+import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,6 +17,7 @@ import androidx.annotation.Nullable;
 import com.anbang.myapplication.aidl.AIDLClientActivity;
 import com.anbang.myapplication.aidl.AIDLClientComplexActivity;
 import com.anbang.myapplication.broadcast.BroadcastTestActivity;
+import com.anbang.myapplication.contentprovider.MyObserver;
 import com.anbang.myapplication.polling.PollingService;
 import com.anbang.myapplication.polling.PollingUtils;
 
@@ -119,6 +124,22 @@ public class MainActivity extends BaseActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, BroadcastTestActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        Button contentprovider  = findViewById(R.id.contentprovider);
+        contentprovider.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //读取contentprovider 数据
+                ContentResolver resolver = MainActivity.this.getContentResolver();
+                MyObserver myObserver = new MyObserver(new Handler());
+                ContentValues values = new ContentValues();
+                values.put("name", "测试"+System.currentTimeMillis());
+                Uri uri = Uri.parse("content://com.anbang.myapplication.contentprovider.nameprovider/test");
+                resolver.insert(uri, values);
+                resolver.registerContentObserver(uri,true,myObserver);
+                Toast.makeText(getApplicationContext(), "数据插入成功", Toast.LENGTH_SHORT).show();
             }
         });
 
