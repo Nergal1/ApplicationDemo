@@ -81,6 +81,7 @@
             android:authorities="com.anbang.myapplication.contentprovider.nameprovider"
             android:name=".contentprovider.NameContentProvider"
             android:exported="true"
+            android:process=":contentprovider"
             ></provider>
     </application>
 
